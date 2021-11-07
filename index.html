@@ -58,6 +58,9 @@
 		    transform: translateY(-100px);
 		  }
 	}
+	html {
+		scroll-behavior: smooth;
+	}
 	
 	
 
@@ -87,6 +90,7 @@
 		myVideo.play(); 
 		myVideo.width = 840;
 		document.getElementById("tuile").style.width = "1px";
+		window.scroll(0,500);
 	}
 
 </script>
