@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2048</title>
+	<link rel="icon" href="img/logo.png">
+</head>
+
+<style type="text/css">
+	
+	body{
+		background: #faf8ef;
+	}
+
+	img.tile {
+		border-radius: 3%;
+		width: 400px;
+	}
+	.start {
+		transition: transform .2s;
+		margin: 50px;
+		width: 200px;
+		background: #8f7a66;
+		border-radius: 3px;
+		padding: 0 20px;
+		text-decoration: none;
+		color: #f9f6f2;
+		margin: 30px;
+	}
+	.start:hover{
+		cursor: pointer;
+		transform: scale(1.5);
+	}
+	.titre{
+		font-size: 80px;
+		font-weight: bold;
+		display: block;
+		font-family: Franklin Gothic Medium;
+		color: #8f7a66;
+
+	        -webkit-animation: action 1s infinite  alternate;
+	        animation: action 1s infinite  alternate;
+	    }
+	    @-webkit-keyframes action {
+	        0% { transform: translateY(0); }
+	        100% { transform: translateY(-10px); }
+	    }
+	    @keyframes action {
+	        0% { transform: translateY(0); }
+	        100% { transform: translateY(-10px); }
+		}
+
+		@keyframes MoveUpDown {
+		  0%, 100% {
+		    transform: translateY(0);
+		  }
+		  50% {
+		    transform: translateY(-100px);
+		  }
+	}
+	
+	
+
+</style>
+
+<body>
+
+	<center>
+		<h1 class="titre">2048</h1>
+		<button class="start" onclick="playPause()" ><h2> New Game</h2></button>
+		<br/>
+		<img class="tile" id="tuile" src="img/tile.png">
+		<video id="video1" width="1px" >
+			<source src="img/rickroll.mp4">
+		</video>
+	</center>
+	
+
+</body>
+
+<script type="text/javascript">
+	
+	var myVideo = document.getElementById("video1");
+	var myTile = document.getElementById ("tuile");
+
+	function playPause() {
+		myVideo.play(); 
+		myVideo.width = 840;
+		document.getElementById("tuile").style.width = "1px";
+	}
+
+</script>
+
+</html>
